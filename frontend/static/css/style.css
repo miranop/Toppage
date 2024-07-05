@@ -1,0 +1,147 @@
+
+
+/* 全体のスタイル */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+/* 検索窓のスタイル */
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 300px; /* 検索窓の幅 */
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* ボタンの背景色 */
+    color: #fff; /* ボタンのテキスト色 */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0056b3; /* ホバー時の背景色 */
+}
+
+/* ブックマークアイコンのスタイル */
+#bookmark-icon {
+    margin-top: 200px; /* アイコンと検索窓の間の余白 */
+    text-align: center;
+    max-width: 1500px; /* 最大幅を設定（例として800px） */
+    margin: 0 auto; /* 横並び時に中央寄せするためのマージン */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bookmark-icon {
+    width: 200px; /* アイコンの幅 */
+    height: 200px; /* 高さは自動調整 */
+    margin: 0px 15px 50px 15px; /* アイコン同士の間隔 */
+    flex: 0 0 calc(20% - 20px); /* 最大5個まで横並びにするための設定 */
+    max-width: calc(20% - 20px); /* 最大5個までのアイコン幅 */
+
+    border: 2px solid #333;
+}
+
+@media screen and (max-width: 1200px) {
+    .bookmark-icon {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-input {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .bookmark-icon {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bookmark-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.bookmark-icon img {
+    width: 200px;
+    height: 200px;
+}
+
+/*サイドバー*/
+
+/* サイドバーメニューのスタイル */
+.sidebar {
+    background-color: #333; /* サイドバーの背景色 */
+    width: 200px; /* サイドバーの幅 */
+    height: 100vh; /* 画面全体の高さに合わせる */
+    position: fixed; /* 固定位置 */
+    left: -250px; /* 初期状態では画面外に移動 */
+    top: 0; /* 上端に固定 */
+    transition: left 0.3s ease; /* アニメーション効果の設定 */
+}
+
+.sidebar-open {
+    left: 0; /* 開いた状態 */
+}
+
+.sidebar ul {
+    list-style-type: none; /* 箇条書きリストのスタイルをリセット */
+    padding: 0;
+    margin: 60px 0; /* メニュー項目の間の余白 */
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* リンクの下線を削除 */
+    color: #fff; /* リンクの文字色 */
+    display: block; /* リンクをブロック要素に変更 */
+}
+
+.sidebar ul li a:hover {
+    background-color: #555; /* ホバー時の背景色 */
+}
+
+/* トグルボタンのスタイル */
+.toggle-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000; /* 最前面に表示 */
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}

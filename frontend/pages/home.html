@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Toppage</title>
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="/">ホーム</a></li>
+            <li><a href="/news">ニュース</a></li>
+            <li><a href="/">便利ツール集</a></li>
+        </ul>
+    </div>
+
+
+    <div class="main-content">
+        <div class="search-container">
+            <form action="https://www.google.com/search" method="get">
+                <input type="search" name="q" placeholder="キーワードを入力" class="search-input">
+                <input type="submit" value="検索" class="search-button">
+            </form>
+        </div>
+        
+        <div id="bookmark-icon"></div>
+
+    </div>
+   
+    <script src="../static/js/app.js"></script>
+    
+    
+</body>
+</html>
